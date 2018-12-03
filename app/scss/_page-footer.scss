@@ -1,0 +1,90 @@
+.page-footer {
+
+  padding: 90px 0;
+  background-color: #f7f7f7;
+
+  &__container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: $header-font-size;
+    color: $text-color;
+  }
+
+  &__text {
+    font-size: $text-font-size;
+    font-style: italic;
+    color: $text-color;
+
+    &--centered {
+      display: inline-block;
+      line-height: 36px;
+      vertical-align: top;
+    }
+  }
+
+  &__social-btn {
+    display: inline-block;
+    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 0.5s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      transform: scale(1.3);
+    }
+
+    &--twitter {
+      background-image: url("../images/twitter-social.png");
+    }
+
+    &--facebook {
+      background-image: url("../images/facebook-social.png");
+    }
+
+    &--pinterest {
+      background-image: url("../images/pinterest-social.png");
+    }
+  }
+
+  &__logo {
+    display: inline-block;
+    width: 55px;
+    height: 36px;
+    background-image: url("../images/yebo.png");
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .page-footer {
+
+    &__container {
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__item {
+      margin-bottom: 20px;
+
+      &--social {
+        order: -1;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.assort {
+  display: flex;
+  height: 535px;
+  justify-content: center;
+
+  &__block-vertical {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  &__block-horizontal {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__item {
+    flex-grow: 1;
+
+  }
+
+  &__link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    letter-spacing: $space;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background: rgba(23, 165, 79, 0.8);
+      transition: 1s;
+    }
+
+    &::after {
+      content: "shop now";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      width: 120px;
+      height: 100px;
+      padding-top: 60px;
+      text-transform: uppercase;
+      text-decoration: none;
+      text-align: center;
+      color: #ffffff;
+      opacity: 0;
+      background-image: url("../images/link-bicycle.png");
+      background-repeat: no-repeat;
+      background-position: center 20px;
+      transition: 1s;
+    }
+
+    &:hover {
+      &::before, &::after {
+        opacity: 1;
+      }
+    }
+
+    &--first {
+      background-image: url("../images/link-1.jpg");
+    }
+
+    &--second {
+      background-image: url("../images/link-2.jpg");
+    }
+
+    &--third {
+      background-image: url("../images/link-3.jpg");
+    }
+
+    &--fourth {
+      background-image: url("../images/link-4.jpg");
+    }
+
+    &--fifth {
+      background-image: url("../images/link-5.jpg");
+    }
+
+    &--sixth {
+      background-image: url("../images/link-6.jpg");
+    }
+
+    &--seventh {
+      background-image: url("../images/link-7.jpg");
+    }
+
+    &--eighth {
+      background-image: url("../images/link-8.jpg");
+    }
+
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .assort {
+    height: calc(535px * 3);
+    max-width: 535px;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+}

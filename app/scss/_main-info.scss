@@ -1,0 +1,61 @@
+.main-info {
+  position: relative;
+  width: 100%;
+  padding-top: 190px;
+  padding-bottom: 145px;
+  text-align: center;
+  font-family: $main-font;
+  background-color: $main-bg-color;
+
+  &__title {
+    margin-bottom: 35px;
+    font-size: $header-font-size;
+    letter-spacing: $space;
+    color: $header-color;
+
+    &--uppercase {
+      text-transform: uppercase;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    width: 60%;
+    color: $text-color;
+    line-height: 34px;
+
+    &--italic {
+      font-style: italic;
+    }
+  }
+
+  &__time {
+    font-weight: normal;
+    color: $text-color;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 115px;
+    transform: translate(-50%);
+    display: block;
+    width: 52px;
+    height: 43px;
+    background: url("../images/chain.png")  no-repeat center;
+  }
+}
+
+@media screen  and  (max-width: 450px){
+  .main-info {
+
+    &__time {
+      display: block;
+    }
+
+    &__text {
+      text-align: justify;
+    }
+  }
+}

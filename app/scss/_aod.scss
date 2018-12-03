@@ -1,0 +1,110 @@
+.aod {
+  position: relative;
+  width: 100%;
+  padding: 250px 0;
+  background-color: $main-bg-color;
+
+  &__container {
+    margin: auto;
+    max-width: $container-width;
+  }
+
+  &__main-info {
+    position: absolute;
+    top: 0;
+    transition: 1s;
+    background-color: transparent;
+
+    &::before {
+      background-image: url("../images/twitter.png")
+    }
+  }
+
+  &__switcher {
+    display: none;
+
+    &:checked + .aod__switcher-styled {
+      background-color: $text-color;
+    }
+
+    &--ny {
+      &:checked ~ .main-info--ny {
+        left: 0;
+      }
+      &:checked ~ .main-info--p {
+        left: -100%;
+      }
+      &:checked ~ .main-info--k {
+        left: -100%;
+      }
+    }
+
+    &--p {
+      &:checked ~ .main-info--ny {
+        left: -100%;
+      }
+      &:checked ~ .main-info--p {
+        left: 0;
+      }
+      &:checked ~ .main-info--k {
+        left: -100%;
+      }
+    }
+    &--k {
+      &:checked ~ .main-info--ny {
+        left: -100%;
+      }
+      &:checked ~ .main-info--p {
+        left: -100%;
+      }
+      &:checked ~ .main-info--k {
+        left: 0;
+      }
+    }
+
+  }
+
+  &__switcher-styled {
+    position: absolute;
+    bottom: 10%;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    border: 1px solid $text-color;
+    border-radius: 50%;
+    z-index: 10;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--ny {
+      left: calc(50% - 30px);
+    }
+
+    &--p {
+      left: 50%;
+    }
+
+    &--k {
+      left: calc(50% + 30px);
+    }
+  }
+}
+
+@media screen and (min-width: 321px) and (max-width: 450px) {
+  .aod {
+    &__container {
+      height: 100px;
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .aod {
+    &__container {
+      height: 250px;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+.contact-us {
+  padding: 75px 0;
+  background-color: $secondary-bg-color;
+
+  &__container {
+    max-width: $container-width;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    padding-left: 90px;
+    padding-right: 90px;
+    font-family: $main-font;
+    letter-spacing: $space;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    color: $green;
+    border: 1px solid $green;
+    transition: 0.5s;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $green;
+      transform-origin: 50%;
+      transform: scale(1.2);
+    }
+
+    &--white {
+      color: #ffffff;
+      border-color: #ffffff;
+
+      &:hover {
+        color: $secondary-bg-color;
+        background-color: #ffffff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .contact-us {
+    &__container {
+      max-width: 400px;
+      flex-direction: column;
+    }
+
+    &__btn {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 420px){
+  .contact-us {
+    &__btn {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

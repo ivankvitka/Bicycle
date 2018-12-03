@@ -1,0 +1,66 @@
+.feed-back {
+  padding: 110px 0;
+  text-align: center;
+
+  &__logo {
+    width: 94px;
+    height: 85px;
+    margin: auto auto 40px;
+    background-image: url("../images/logo.png");
+  }
+
+  &__promo {
+    display: inline-block;
+    margin-bottom: 35px;
+    font-family: $main-font;
+    font-size: 24px;
+    font-style: italic;
+    color: $text-color;
+  }
+
+  &__form {
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 534px;
+  }
+
+  &__email {
+    flex-basis: 100px;
+    flex-grow: 3;
+    margin-right: 9px;
+    padding: 25px;
+    font-family: $main-font;
+    font-size: 20px;
+    font-style: italic;
+    color: $text-color;
+  }
+
+  &__btn {
+    flex-basis: 100px;
+    flex-grow: 1;
+    padding: 25px;
+    font-family: $main-font;
+    font-weight: lighter;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: $green;
+    border: none;
+    transition: 1s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $secondary-bg-color;
+    }
+  }
+}
+
+@media screen and (max-width: 394px){
+  .feed-back {
+    &__email {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+}
