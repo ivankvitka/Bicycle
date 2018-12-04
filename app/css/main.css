@@ -5,9 +5,12 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Lato", sans-serif;
+}
+
 .page-header {
   padding: 35px 0 700px 0;
-  font-family: "Lato", sans-serif;
   background: url("../images/header.jpg") no-repeat center top/cover;
 }
 
@@ -70,7 +73,6 @@
   padding-top: 190px;
   padding-bottom: 145px;
   text-align: center;
-  font-family: "Lato", sans-serif;
   background-color: #f7f7f7;
 }
 
@@ -177,7 +179,6 @@
   position: relative;
   padding: 130px 65px 0;
   height: 90%;
-  font-family: "Lato", sans-serif;
   overflow: hidden;
 }
 
@@ -208,6 +209,7 @@
 .wrapper__title {
   margin-bottom: 25px;
   font-size: 18px;
+  letter-spacing: 3px;
   text-transform: uppercase;
   text-align: center;
 }
@@ -506,7 +508,6 @@
 .contact-us__btn {
   padding-left: 90px;
   padding-right: 90px;
-  font-family: "Lato", sans-serif;
   letter-spacing: 3px;
   text-decoration: none;
   text-transform: uppercase;
@@ -566,7 +567,6 @@
 .feed-back__promo {
   display: inline-block;
   margin-bottom: 35px;
-  font-family: "Lato", sans-serif;
   font-size: 24px;
   font-style: italic;
   color: #848789;
@@ -584,7 +584,6 @@
   flex-grow: 3;
   margin-right: 9px;
   padding: 25px;
-  font-family: "Lato", sans-serif;
   font-size: 20px;
   font-style: italic;
   color: #848789;
@@ -594,7 +593,6 @@
   flex-basis: 100px;
   flex-grow: 1;
   padding: 25px;
-  font-family: "Lato", sans-serif;
   font-weight: lighter;
   font-size: 24px;
   text-transform: uppercase;

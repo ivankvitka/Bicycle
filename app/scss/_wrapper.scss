@@ -52,7 +52,6 @@
     position: relative;
     padding: 130px 65px 0;
     height: 90%;
-    font-family: $main-font;
     overflow: hidden;
 
     &::before {
@@ -89,6 +88,7 @@
   &__title {
     margin-bottom: 25px;
     font-size: $header-font-size;
+    letter-spacing: $space;
     text-transform: uppercase;
     text-align: center;
   }

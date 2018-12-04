@@ -12,7 +12,6 @@
   &__promo {
     display: inline-block;
     margin-bottom: 35px;
-    font-family: $main-font;
     font-size: 24px;
     font-style: italic;
     color: $text-color;
@@ -30,7 +29,6 @@
     flex-grow: 3;
     margin-right: 9px;
     padding: 25px;
-    font-family: $main-font;
     font-size: 20px;
     font-style: italic;
     color: $text-color;
@@ -40,7 +38,6 @@
     flex-basis: 100px;
     flex-grow: 1;
     padding: 25px;
-    font-family: $main-font;
     font-weight: lighter;
     font-size: 24px;
     text-transform: uppercase;
