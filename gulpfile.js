@@ -1,8 +1,8 @@
-var gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	browserSync = require('browser-sync'),
-	plumber = require('gulp-plumber'),
-	rename = require('gulp-rename');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var browserSync = require('browser-sync');
+var plumber = require('gulp-plumber');
+var rename = require('gulp-rename');
 
 gulp.task("sass", function () {
 	gulp
