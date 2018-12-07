@@ -1,6 +1,5 @@
 .page-footer {
-
-  padding: 90px 0;
+  padding: 90px 20px;
   background-color: #f7f7f7;
 
   &__container {
@@ -24,6 +23,15 @@
       display: inline-block;
       line-height: 36px;
       vertical-align: top;
+    }
+  }
+
+  &__mail {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -66,7 +74,7 @@
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .page-footer {
 
     &__container {

@@ -32,6 +32,12 @@ body {
   text-transform: uppercase;
 }
 
+.page-header__list-item--dot::after {
+  content: ".";
+  display: inline-block;
+  margin-left: 50px;
+}
+
 .page-header__link {
   font-size: 13px;
   font-weight: bold;
@@ -57,7 +63,7 @@ body {
   .page-header__list-item--logo {
     order: -1;
   }
-  .page-header__list-item--dot {
+  .page-header__list-item--dot::after {
     display: none;
   }
   .page-header__link {
@@ -226,34 +232,30 @@ body {
   }
 }
 
-.oliva {
+.vintage {
   display: flex;
   height: 600px;
 }
 
-.oliva__bicycle-background {
+.vintage--reverse {
+  flex-direction: row-reverse;
+}
+
+.vintage__bicycle-background {
   flex-grow: 1;
   height: 100%;
   background: url("../images/oliva-icon.png") no-repeat center, url("../images/oliva.jpg") no-repeat center top/cover;
 }
 
-.oliva__wrapper {
+.vintage__bicycle-background--reverse {
+  background-image: url("../images/boriosa-icon.png"), url("../images/boriosa.jpg");
+}
+
+.vintage__wrapper {
   background-image: url("../images/brown-seat.jpg");
 }
 
-.boriosa {
-  display: flex;
-  flex-direction: row-reverse;
-  height: 600px;
-}
-
-.boriosa__bicycle-background {
-  flex-grow: 1;
-  height: 100%;
-  background: url("../images/boriosa-icon.png") no-repeat center, url("../images/boriosa.jpg") no-repeat center top/cover;
-}
-
-.boriosa__wrapper {
+.vintage__wrapper--reverse {
   background-image: url("../images/black-seat.jpg");
 }
 
@@ -278,74 +280,74 @@ body {
   background-image: url("../images/spokes.jpg");
 }
 
-.aod {
+.twitter {
   position: relative;
   width: 100%;
   padding: 250px 0;
   background-color: #f7f7f7;
 }
 
-.aod__container {
+.twitter__container {
   margin: auto;
   max-width: 1100px;
 }
 
-.aod__main-info {
+.twitter__main-info {
   position: absolute;
   top: 0;
   transition: 1s;
   background-color: transparent;
 }
 
-.aod__main-info::before {
+.twitter__main-info::before {
   background-image: url("../images/twitter.png");
 }
 
-.aod__switcher {
+.twitter__switcher {
   display: none;
 }
 
-.aod__switcher:checked + .aod__switcher-styled {
+.twitter__switcher:checked + .twitter__switcher-styled {
   background-color: #848789;
 }
 
-.aod__switcher--ny:checked ~ .main-info--ny {
+.twitter__switcher--ny:checked ~ .main-info--ny {
   left: 0;
 }
 
-.aod__switcher--ny:checked ~ .main-info--p {
+.twitter__switcher--ny:checked ~ .main-info--p {
   left: -100%;
 }
 
-.aod__switcher--ny:checked ~ .main-info--k {
+.twitter__switcher--ny:checked ~ .main-info--k {
   left: -100%;
 }
 
-.aod__switcher--p:checked ~ .main-info--ny {
+.twitter__switcher--p:checked ~ .main-info--ny {
   left: -100%;
 }
 
-.aod__switcher--p:checked ~ .main-info--p {
+.twitter__switcher--p:checked ~ .main-info--p {
   left: 0;
 }
 
-.aod__switcher--p:checked ~ .main-info--k {
+.twitter__switcher--p:checked ~ .main-info--k {
   left: -100%;
 }
 
-.aod__switcher--k:checked ~ .main-info--ny {
+.twitter__switcher--k:checked ~ .main-info--ny {
   left: -100%;
 }
 
-.aod__switcher--k:checked ~ .main-info--p {
+.twitter__switcher--k:checked ~ .main-info--p {
   left: -100%;
 }
 
-.aod__switcher--k:checked ~ .main-info--k {
+.twitter__switcher--k:checked ~ .main-info--k {
   left: 0;
 }
 
-.aod__switcher-styled {
+.twitter__switcher-styled {
   position: absolute;
   bottom: 10%;
   display: inline-block;
@@ -357,30 +359,30 @@ body {
   z-index: 10;
 }
 
-.aod__switcher-styled:hover {
+.twitter__switcher-styled:hover {
   cursor: pointer;
 }
 
-.aod__switcher-styled--ny {
+.twitter__switcher-styled--ny {
   left: calc(50% - 30px);
 }
 
-.aod__switcher-styled--p {
+.twitter__switcher-styled--p {
   left: 50%;
 }
 
-.aod__switcher-styled--k {
+.twitter__switcher-styled--k {
   left: calc(50% + 30px);
 }
 
 @media screen and (min-width: 321px) and (max-width: 450px) {
-  .aod__container {
+  .twitter__container {
     height: 100px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .aod__container {
+  .twitter__container {
     height: 250px;
   }
 }
@@ -391,15 +393,13 @@ body {
   justify-content: center;
 }
 
-.assort__block-vertical {
+.assort__block {
   display: flex;
-  flex-direction: column;
   flex-grow: 1;
 }
 
-.assort__block-horizontal {
-  display: flex;
-  flex-grow: 1;
+.assort__block--vertical {
+  flex-direction: column;
 }
 
 .assort__item {
@@ -414,6 +414,7 @@ body {
   letter-spacing: 3px;
   background-repeat: no-repeat;
   background-position: top center;
+  background-size: cover;
 }
 
 .assort__link::before {
@@ -494,7 +495,7 @@ body {
 }
 
 .contact-us {
-  padding: 75px 0;
+  padding: 75px 20px;
   background-color: #282f35;
 }
 
@@ -535,7 +536,7 @@ body {
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 980px) {
+@media screen and (max-width: 1040px) {
   .contact-us__container {
     max-width: 400px;
     flex-direction: column;
@@ -545,7 +546,7 @@ body {
   }
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 450px) {
   .contact-us__btn {
     padding-left: 0;
     padding-right: 0;
@@ -553,7 +554,7 @@ body {
 }
 
 .feed-back {
-  padding: 110px 0;
+  padding: 110px 20px;
   text-align: center;
 }
 
@@ -575,7 +576,6 @@ body {
 .feed-back__form {
   margin: auto;
   display: flex;
-  flex-wrap: wrap;
   max-width: 534px;
 }
 
@@ -607,7 +607,10 @@ body {
   background-color: #282f35;
 }
 
-@media screen and (max-width: 394px) {
+@media screen and (max-width: 460px) {
+  .feed-back__form {
+    flex-direction: column;
+  }
   .feed-back__email {
     margin-right: 0;
     margin-bottom: 10px;
@@ -615,7 +618,7 @@ body {
 }
 
 .page-footer {
-  padding: 90px 0;
+  padding: 90px 20px;
   background-color: #f7f7f7;
 }
 
@@ -641,6 +644,15 @@ body {
   display: inline-block;
   line-height: 36px;
   vertical-align: top;
+}
+
+.page-footer__mail {
+  text-decoration: none;
+  color: #848789;
+}
+
+.page-footer__mail:hover {
+  text-decoration: underline;
 }
 
 .page-footer__social-btn {
@@ -680,7 +692,7 @@ body {
   background-image: url("../images/yebo.png");
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .page-footer__container {
     align-items: center;
     flex-direction: column;

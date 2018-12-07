@@ -3,20 +3,18 @@
   height: 535px;
   justify-content: center;
 
-  &__block-vertical {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-  }
 
-  &__block-horizontal {
+  &__block {
     display: flex;
     flex-grow: 1;
+    &--vertical {
+      flex-direction: column;
+    }
+
   }
 
   &__item {
     flex-grow: 1;
-
   }
 
   &__link {
@@ -27,6 +25,7 @@
     letter-spacing: $space;
     background-repeat: no-repeat;
     background-position: top center;
+    background-size: cover;
 
     &::before {
       content: "";

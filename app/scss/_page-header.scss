@@ -18,6 +18,14 @@
     display: inline-block;
     font-size: 13px;
     text-transform: uppercase;
+
+    &--dot {
+      &::after {
+        content: ".";
+        display: inline-block;
+        margin-left: 50px;
+      }
+    }
   }
 
   &__link {
@@ -50,7 +58,9 @@
       }
 
       &--dot {
-        display: none;
+        &::after {
+          display: none;
+        }
       }
     }
 

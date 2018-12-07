@@ -1,5 +1,5 @@
 .feed-back {
-  padding: 110px 0;
+  padding: 110px 20px;
   text-align: center;
 
   &__logo {
@@ -20,7 +20,6 @@
   &__form {
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
     max-width: 534px;
   }
 
@@ -53,8 +52,11 @@
   }
 }
 
-@media screen and (max-width: 394px){
+@media screen and (max-width: 460px){
   .feed-back {
+    &__form {
+      flex-direction: column;
+    }
     &__email {
       margin-right: 0;
       margin-bottom: 10px;

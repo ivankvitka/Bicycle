@@ -1,20 +1,20 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	browserSync = require('browser-sync'),
-	plumber = require('gulp-plumber')
-	rename =  require('gulp-rename');
+	plumber = require('gulp-plumber'),
+	rename = require('gulp-rename');
 
-gulp.task("sass", function() {
+gulp.task("sass", function () {
 	gulp
 		.src("app/scss/main.scss")
 		.pipe(plumber())
-		.pipe(sass({ outputStyle: "expanded" }))
+		.pipe(sass({outputStyle: "expanded"}))
 		.pipe(rename("main.css"))
 		.pipe(gulp.dest("app/css"))
-		.pipe(browserSync.reload({ stream: true }));
+		.pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
 	browserSync({
 		server: {
 			baseDir: 'app'

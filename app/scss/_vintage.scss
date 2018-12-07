@@ -1,0 +1,29 @@
+.vintage {
+  display: flex;
+  height: 600px;
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__bicycle-background {
+    flex-grow: 1;
+    height: 100%;
+    background: url("../images/oliva-icon.png") no-repeat center,
+    url("../images/oliva.jpg") no-repeat center top/cover;
+
+    &--reverse {
+      background-image: url("../images/boriosa-icon.png"),
+      url("../images/boriosa.jpg");
+
+    }
+  }
+
+  &__wrapper {
+    background-image: url("../images/brown-seat.jpg");
+
+    &--reverse {
+      background-image: url("../images/black-seat.jpg");
+    }
+  }
+}

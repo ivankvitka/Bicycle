@@ -1,4 +1,4 @@
-.aod {
+.twitter {
   position: relative;
   width: 100%;
   padding: 250px 0;
@@ -23,7 +23,7 @@
   &__switcher {
     display: none;
 
-    &:checked + .aod__switcher-styled {
+    &:checked + .twitter__switcher-styled {
       background-color: $text-color;
     }
 
@@ -94,7 +94,7 @@
 }
 
 @media screen and (min-width: 321px) and (max-width: 450px) {
-  .aod {
+  .twitter {
     &__container {
       height: 100px;
     }
@@ -102,7 +102,7 @@
 }
 
 @media screen and (max-width: 320px) {
-  .aod {
+  .twitter {
     &__container {
       height: 250px;
     }
