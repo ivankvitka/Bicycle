@@ -15,8 +15,17 @@
     &--reverse {
       background-image: url("../images/boriosa-icon.png"),
       url("../images/boriosa.jpg");
-
     }
+
+    &--first {
+      background-image: url("../images/hulot-icon.png"),
+      url("../images/red-frame.jpg");
+    }
+
+    &--second {
+      background: url("../images/red-bicycle.jpg") no-repeat center top/cover;
+    }
+
   }
 
   &__wrapper {
@@ -24,6 +33,10 @@
 
     &--reverse {
       background-image: url("../images/black-seat.jpg");
+    }
+
+    &--centered {
+      background-image: url("../images/spokes.jpg");
     }
   }
 }

@@ -251,6 +251,14 @@ body {
   background-image: url("../images/boriosa-icon.png"), url("../images/boriosa.jpg");
 }
 
+.vintage__bicycle-background--first {
+  background-image: url("../images/hulot-icon.png"), url("../images/red-frame.jpg");
+}
+
+.vintage__bicycle-background--second {
+  background: url("../images/red-bicycle.jpg") no-repeat center top/cover;
+}
+
 .vintage__wrapper {
   background-image: url("../images/brown-seat.jpg");
 }
@@ -259,24 +267,7 @@ body {
   background-image: url("../images/black-seat.jpg");
 }
 
-.hulot {
-  display: flex;
-  height: 600px;
-}
-
-.hulot__bicycle-background-first {
-  flex-grow: 1;
-  height: 100%;
-  background: url("../images/hulot-icon.png") no-repeat center, url("../images/red-frame.jpg") no-repeat center top/cover;
-}
-
-.hulot__bicycle-background-second {
-  flex-grow: 1;
-  height: 100%;
-  background: url("../images/red-bicycle.jpg") no-repeat center top/cover;
-}
-
-.hulot__wrapper {
+.vintage__wrapper--centered {
   background-image: url("../images/spokes.jpg");
 }
 
@@ -587,6 +578,15 @@ body {
   font-size: 20px;
   font-style: italic;
   color: #848789;
+  border: 1px solid #d3d7d9;
+}
+
+.feed-back__email:hover {
+  border-color: #64c29e;
+}
+
+.feed-back__email::placeholder {
+  color: #c8c8c8;
 }
 
 .feed-back__btn {

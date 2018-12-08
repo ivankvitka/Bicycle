@@ -31,6 +31,15 @@
     font-size: 20px;
     font-style: italic;
     color: $text-color;
+    border: 1px solid #d3d7d9;
+
+    &:hover {
+      border-color: $green;
+    }
+
+    &::placeholder {
+      color: #c8c8c8;
+    }
   }
 
   &__btn {
